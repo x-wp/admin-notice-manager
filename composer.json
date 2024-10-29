@@ -1,0 +1,66 @@
+{
+  "name": "x-wp/admin-notice-manager",
+  "description": "Simplifies the process of working with admin notices in WordPress.",
+  "license": "GPL-2.0-only",
+  "type": "library",
+  "keywords": [
+    "wordpress",
+    "admin",
+    "notices",
+    "admin notices"
+  ],
+  "homepage": "https://extended.wp.rs/docs/packages/admin-notice-manager",
+  "authors": [
+    {
+      "name": "Sibin Grasic",
+      "email": "i.am@sib.ing"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/x-wp/admin-notice-manager/issues"
+  },
+  "require": {
+    "php": ">=8.0",
+    "x-wp/helper-functions": "^1.16",
+    "x-wp/helper-traits": "^1.16"
+  },
+  "require-dev": {
+    "oblak/wordpress-coding-standard": "^1",
+    "php-stubs/wordpress-stubs": "^6.5",
+    "phpstan/extension-installer": "^1.3",
+    "phpstan/phpstan": "^1.10",
+    "phpstan/phpstan-deprecation-rules": "^1.1",
+    "swissspidy/phpstan-no-private": "^0.2.0",
+    "szepeviktor/phpstan-wordpress": "^1.3"
+  },
+  "replace": {
+    "oblak/admin-notice-manager": "*"
+  },
+  "suggest": {
+    "automattic/jetpack-autoloader": "Allow for better interoperability with other plugins that use this package."
+  },
+  "autoload": {
+    "psr-4": {
+      "XWP\\ANM\\": "src/"
+    },
+    "classmap": [
+      "src/Core/"
+    ],
+    "files": [
+      "src/Functions/xwp-anm-fns.php",
+      "src/Functions/xwp-anm-init.php"
+    ]
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "phpstan/extension-installer": true
+    },
+    "classmap-authoritative": true,
+    "optimize-autoloader": true,
+    "platform": {
+      "php": "8.0"
+    },
+    "sort-packages": true
+  }
+}
