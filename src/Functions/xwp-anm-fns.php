@@ -30,7 +30,7 @@ use XWP\ANM\Notice_Repository;
  * } $args Notice arguments.
  * @return XWP_Admin_Notice
  */
-function xwp_new_notice( array $args = array() ): XWP_Admin_Notice {
+function xwp_create_notice( array $args = array() ): XWP_Admin_Notice {
     return ( new XWP_Admin_Notice() )->set_props( $args );
 }
 
