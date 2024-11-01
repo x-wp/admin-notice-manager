@@ -295,7 +295,7 @@ class XWP_Admin_Notice {
      * @param  string|array<string> $caps Capabilities.
      * @return self
      */
-    public function set_cap( string|array $caps ): self {
+    public function set_caps( string|array $caps ): self {
         return $this->set_prop( 'caps', \xwp_str_to_arr( $caps ) );
     }
 
