@@ -12,6 +12,10 @@ defined( 'ABSPATH' ) || exit;
     <<<'JS'
     <script type="text/javascript">
         (function($) {
+            $('.xwp-anm-notice.is-dismissible.is-persistent').on('click', 'p.submit .xwp-notice-dismiss', function(e) {
+                e.preventDefault();
+                $(this).closest('.xwp-anm-notice').find('.notice-dismiss').trigger('click');
+            });
             $('.xwp-anm-notice.is-dismissible.is-persistent').on('click', '.notice-dismiss', function() {
                 var $notice = $(this).closest('.xwp-anm-notice');
 
